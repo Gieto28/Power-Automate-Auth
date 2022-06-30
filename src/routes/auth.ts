@@ -3,6 +3,6 @@ import { powerAutomateAuth } from "../actions";
 
 const routes: Router = Router();
 
-routes.get("/auth", powerAutomateAuth);
+routes.post("/auth", powerAutomateAuth);
 
 export default routes;

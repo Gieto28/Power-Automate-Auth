@@ -3,12 +3,12 @@ import bcrypt from "bcrypt";
 
 const action = async (req: Request, res: Response) => {
   try {
-    const { auth } = req.headers;
+    const { authentication } = req.headers;
 
-    console.log(auth);
+    console.log(authentication);
 
     const comparePasswords: boolean = await bcrypt.compare(
-      auth.toString(),
+      authentication.toString(),
       "$2b$06$s2BpC6fiM5z.WvjRYtTSnO9fztofrmYEi9C4mjkY6YLxswFNqzHo2"
     );
 

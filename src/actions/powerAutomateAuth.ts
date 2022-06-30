@@ -6,6 +6,7 @@ const action = async (req: Request, res: Response) => {
     const { authentication } = req.headers;
 
     console.log(authentication);
+    console.log(req.headers);
 
     const comparePasswords: boolean = await bcrypt.compare(
       authentication.toString(),

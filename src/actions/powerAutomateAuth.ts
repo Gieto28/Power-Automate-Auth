@@ -5,8 +5,6 @@ const action = async (req: Request, res: Response) => {
   try {
     const { username, password } = req.body;
 
-    console.log(password);
-
     const comparePasswords: boolean = await bcrypt.compare(
       password,
       "$2b$06$s2BpC6fiM5z.WvjRYtTSnO9fztofrmYEi9C4mjkY6YLxswFNqzHo2"

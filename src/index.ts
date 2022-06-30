@@ -1,9 +1,9 @@
 import app from "./app";
 
-const port = 3000;
+const PORT = 3000;
 
-app.listen(port, () =>
+app.listen(PORT, () =>
   console.log(
-    `\u{1F525} Server starting on port ${port} - click here http://localhost:${port} to go to server`
+    `\u{1F525} Server starting on PORT ${PORT} - click here http://localhost:${PORT} to go to server`
   )
 );

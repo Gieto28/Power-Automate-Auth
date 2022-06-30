@@ -3,12 +3,16 @@ import bcrypt from "bcrypt";
 
 const action = async (req: Request, res: Response) => {
   try {
-    const { password } = req.body;
+    const { auth } = req.headers;
+
+    console.log(auth);
 
     const comparePasswords: boolean = await bcrypt.compare(
-      password,
+      auth.toString(),
       "$2b$06$s2BpC6fiM5z.WvjRYtTSnO9fztofrmYEi9C4mjkY6YLxswFNqzHo2"
     );
+
+    console.log(comparePasswords);
 
     if (!comparePasswords) {
       return res.status(400).json({ message: "Passwords do not match." });

@@ -1,5 +1,5 @@
 import { Response, Router } from "express";
-import authRoute from "./auth";
+import powerAutomate from "./powerAutomate";
 
 const routes = Router();
 
@@ -11,6 +11,6 @@ routes.get("/", async (_, res: Response) =>
   })
 );
 
-routes.use("/powerAutomate", authRoute);
+routes.use("/powerAutomate", powerAutomate);
 
 export default routes;
